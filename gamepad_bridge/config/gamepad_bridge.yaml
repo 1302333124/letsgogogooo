@@ -1,0 +1,9 @@
+gamepad_twist_bridge:
+  ros__parameters:
+    # Twist 发布频率，单位 Hz，必须大于 0。
+    publish_rate: 100.0
+
+    # 三个方向的最大速度。摇杆输入会在负最大值到正最大值之间变化。
+    max_linear_x: 1.0   # 前后速度，单位 m/s
+    max_linear_y: 1.0    # 左右速度，单位 m/s
+    max_angular_z: 1.0      # 旋转速度，单位 rad/s

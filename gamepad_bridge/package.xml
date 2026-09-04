@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>gamepad_bridge</name>
+  <version>0.0.0</version>
+  <description>Receive browser gamepad data over LAN and publish geometry_msgs/Twist.</description>
+  <maintainer email="1302333124@qq.com">destin</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+
+  <exec_depend>python3-aiohttp</exec_depend>
+  <exec_depend>python3-cryptography</exec_depend>
+  <exec_depend>python3-qrcode</exec_depend>
+  <exec_depend>python3-pil</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

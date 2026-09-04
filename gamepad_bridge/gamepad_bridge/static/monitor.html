@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171a1d">
+  <title>电脑手柄监视端</title>
+  <link rel="stylesheet" href="/static/styles.css?v=3">
+</head>
+<body data-page="monitor">
+  <header class="topbar"><span class="brand">Gamepad Bridge</span><a href="/">手机发送端</a></header>
+  <main class="page">
+    <section class="intro">
+      <div><p class="eyebrow">电脑监视端</p><h1>实时输入监视</h1></div>
+      <div id="connection" class="status"><span class="dot"></span><span>正在连接</span></div>
+    </section>
+    <section class="panel">
+      <div class="metrics">
+        <div class="metric"><strong id="senders">0</strong><span>手机发送端</span></div>
+        <div class="metric"><strong><span id="latency">0</span> ms</strong><span>局域网延迟</span></div>
+        <div class="metric"><strong><span id="rate">0</span> Hz</strong><span>接收帧率</span></div>
+      </div>
+      <p id="client-info" class="client-info">等待手机浏览器信息</p>
+      <div id="gamepads" class="controller"><div class="empty">等待手机发送手柄数据</div></div>
+    </section>
+    <section class="panel setup">
+      <img class="qr" src="/qr.png" alt="手机发送端二维码">
+      <div><h2>连接手机</h2><p>手机与电脑连接同一 Wi-Fi，信任本机 CA 后扫描二维码。</p><a id="phone-url" class="url"></a><p><a class="secondary" href="/ca.crt">下载本机 CA 证书</a></p></div>
+    </section>
+  </main>
+  <script src="/static/app.js?v=3"></script>
+</body>
+</html>

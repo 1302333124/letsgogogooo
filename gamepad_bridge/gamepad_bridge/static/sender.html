@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#171a1d">
+  <title>手机手柄发送端</title>
+  <link rel="stylesheet" href="/static/styles.css?v=7">
+</head>
+<body data-page="sender">
+  <header class="topbar"><span class="brand">Gamepad Bridge</span><a href="/monitor">电脑监视端</a></header>
+  <main class="page">
+    <section class="intro">
+      <div class="sender-title"><p class="eyebrow">手机发送端</p><h1>手柄输入</h1></div>
+      <div id="device-status" class="notice warning" hidden></div>
+      <div class="sender-actions">
+        <div id="connection" class="status"><span class="dot"></span><span>尚未开始</span></div>
+        <button id="rotate" class="icon-button focus-only" type="button"
+                aria-label="切换横屏方向" title="切换横屏方向">
+          <span aria-hidden="true">&#x21BB;</span>
+        </button>
+        <button id="fullscreen" class="icon-button" type="button"
+                aria-label="进入全屏" title="进入全屏">
+          <span aria-hidden="true">&#x26F6;</span>
+        </button>
+      </div>
+    </section>
+    <section class="panel sender-panel">
+      <button id="start" class="primary" type="button">开始读取并传输</button>
+      <p id="sender-help" class="hint sender-secondary">先连接手柄并按任意键，再点击开始。传输时请保持此页面位于前台。</p>
+      <dl class="diagnostics sender-secondary">
+        <div><dt>安全环境</dt><dd id="secure-value">检测中</dd></div>
+        <div><dt>Gamepad API</dt><dd id="api-value">检测中</dd></div>
+        <div><dt>Gamepad 设备</dt><dd id="pad-count">0</dd></div>
+        <div><dt>键盘模式按键</dt><dd id="keyboard-count">0</dd></div>
+      </dl>
+      <p id="last-event" class="hint sender-secondary">尚未收到设备连接事件</p>
+      <details class="browser-details sender-secondary"><summary>浏览器信息</summary><p id="browser-value"></p></details>
+      <div id="gamepads" class="controller"><div class="empty">尚未读取手柄</div></div>
+    </section>
+  </main>
+  <script src="/static/app.js?v=9"></script>
+</body>
+</html>
